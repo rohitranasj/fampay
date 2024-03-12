@@ -72,15 +72,15 @@ curl --location --request PUT 'http://localhost:9200/fam_pay_v1' \
 ```
 
 5. Building project 
-    - from project root folder type: docker-compose up
+    - from project root folder type: `docker-compose up`
     - this will setup redis, celery-beat, celery-worker and django container. 
 
 
 ## Stack Used:
-Web Framework - Django
-DB - ElasticSearch
-Celery worker and beat for periodic task
-Queue - Redis
+- Web Framework: Django
+- DB: ElasticSearch
+- Celery worker and beat for periodic task
+- Queue: Redis
 
 ## Flow Overview:
 - Our Celery beat will make sure to send a task in redis queue after every 60s.
